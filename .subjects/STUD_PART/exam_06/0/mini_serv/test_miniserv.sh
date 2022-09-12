@@ -23,7 +23,7 @@ nc -z localhost $1
 # if it's open, then we can test the program
 if [ $? -eq 1 ]; then    
     echo "----------------8<-------------[ START TEST " >> traceback
-    # printf "        🔎 YOUR OUTPUT:\n" >> traceback
+    # printf "        🔎 SUA SAÍDA:\n" >> traceback
     # cat trace >> traceback
     printf "        ❌ PORT IS NOT OPEN \n" >> traceback
     printf "        💻 TEST\n./a.out $1\n" >> traceback
@@ -59,7 +59,7 @@ kill $PID2
 else
 
     echo "----------------8<-------------[ START TEST " >> traceback
-    printf "        🔎 YOUR OUTPUT:\n" >> traceback
+    printf "        🔎 SUA SAÍDA:\n" >> traceback
     cat trace >> traceback
     printf "        ❌ COMPILATION ERROR\n" >> traceback
     echo "----------------8<------------- END TEST ]" >> traceback
@@ -68,7 +68,7 @@ fi
     
     # else
     #     echo "----------------8<-------------[ START TEST " >> traceback
-    #     printf "        🔎 YOUR OUTPUT:\n" >> traceback
+    #     printf "        🔎 SUA SAÍDA:\n" >> traceback
     #     cat trace >> traceback
     #     printf "        ❌ PORT IS NOT OPEN \n" >> traceback
     #     echo "----------------8<------------- END TEST ]" >> traceback

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    auto_correc_main.sh                                :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+         #
+#    By: dida-sil <dida-sil@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/20 02:26:11 by jcluzet           #+#    #+#              #
-#    Updated: 2022/09/01 23:31:55 by jcluzet          ###   ########.fr        #
+#    Updated: 2022/09/08 23:19:02 by dida-sil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ if [ "$DIFF" != "" ]
 then
         echo "----------------8<-------------[ START TEST " >> traceback
         printf "        💻 TEST\n./a.out ${@:3}\n" >> traceback
-        printf "        🔎 YOUR OUTPUT:\n" >> traceback
+        printf "        🔎 SUA SAÍDA:\n" >> traceback
         cat finalexam >> traceback
 		if [ -e final ]
 		then

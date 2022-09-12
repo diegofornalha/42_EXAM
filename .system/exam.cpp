@@ -84,24 +84,24 @@ void exam::explanation(void)
     system("clear");
 
     std::cout << std::endl
-              << "\x1B[32m        EXPLANATION : \e[97m\e[1m" << std::endl
+              << "\x1B[32m        EXPLICAÇÃO : \e[97m\e[1m" << std::endl
               << std::endl;
-    std::cout << "     ⚠️  You have to work from a new window to keep this one \x1B[32mavailable\e[97m\e[1m\n"
+    std::cout << "     ⚠️  Você precisa trabalhar em uma nova janela para manter esta \x1B[32mavailable\e[97m\e[1m\n"
               << std::endl;
-    std::cout << "     📝 A random subject named \x1B[32msubject.en.txt\e[97m\e[1m will be generated" << std::endl;
-    std::cout << "         > You must write your file (example.c) in the assign folder (see subject)," << std::endl;
-    std::cout << "           this folder must be in folder: \x1B[32mrendu\e[97m\e[1m" << std::endl
+    std::cout << "     📝 Um assunto aleatório chamado \x1B[32msubject.en.txt\e[97m\e[1m will be generated" << std::endl;
+    std::cout << "         > Você deve escrever seu arquivo (example.c) na pasta de atribuição (ver assunto)," << std::endl;
+    std::cout << "           esta pasta deve estar na pasta: \x1B[32mrendu\e[97m\e[1m" << std::endl
               << std::endl;
-    std::cout << "     🎓 Once completed, you can push/correct your project with : \x1B[32mgrademe\e[97m\e[1m" << std::endl;
-    std::cout << "         If your level is validated, you move on to the next level 🎉" << std::endl;
-    std::cout << "         If not, you have to start again ❌" << std::endl
+    std::cout << "     🎓 Uma vez concluído, você pode enviar/corrigir seu projeto com : \x1B[32mgrademe\e[97m\e[1m" << std::endl;
+    std::cout << "         Se o seu nível for validado, você passa para o próximo nível 🎉" << std::endl;
+    std::cout << "         Se não, você tem que começar de novo ❌" << std::endl
               << std::endl;
-    std::cout << "     ⌛️ Warning: The more you try to get the same project corrected, \n     the longer you will have to wait to get it \x1B[32mcorrected\e[97m\e[1m.\n\n"
+    std::cout << "     ⌛️ Atenção: Quanto mais você tenta corrigir o mesmo projeto, \n     quanto mais tempo você terá que esperar para obtê-lo \x1B[32mcorrected\e[97m\e[1m.\n\n"
               << std::endl;
-    std::cout << "     📌 Nice reminder : Here you don't need to use GIT.\n         Remember that during the exam you will have to use it to push your project !\n\n"
+    std::cout << "     📌 Bom lembrete: aqui você não precisa usar o GIT.\n         Lembre-se de que durante o exame você terá que usá-lo para empurrar seu projeto !\n\n"
               << std::endl
               << std::endl;
-    std::cout << "     (Press enter to continue...)" << std::endl
+    std::cout << "     (Pressione enter para continuar...)" << std::endl
               << "      ";
     if (!std::getline(std::cin, enter))
         sigd();

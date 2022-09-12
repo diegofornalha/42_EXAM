@@ -3,9 +3,9 @@ Expected files   : ft_swap.c
 Allowed functions: 
 --------------------------------------------------------------------------------
 
-Write a function that swaps the contents of two integers the adresses of which
-are passed as parameters.
+Escreva uma função que troque o conteúdo de dois inteiros cujos endereços
+são passados como parâmetros.
 
-Your function must be declared as follows:
+Sua função deve ser declarada da seguinte forma:
 
 void	ft_swap(int *a, int *b);

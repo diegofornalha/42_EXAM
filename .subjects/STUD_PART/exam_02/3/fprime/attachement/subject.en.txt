@@ -3,17 +3,17 @@ Expected files   : fprime.c
 Allowed functions: printf, atoi
 --------------------------------------------------------------------------------
 
-Write a program that takes a positive int and displays its prime factors on the
-standard output, followed by a newline.
+Escreva um programa que receba um inteiro positivo e exiba seus fatores primos no
+saída padrão, seguida por uma nova linha.
 
-Factors must be displayed in ascending order and separated by '*', so that
-the expression in the output gives the right result.
+Os fatores devem ser exibidos em ordem crescente e separados por '*', para que
+a expressão na saída dá o resultado correto.
 
-If the number of parameters is not 1, simply display a newline.
+Se o número de parâmetros não for 1, basta exibir uma nova linha.
 
-The input, when there is one, will be valid.
+A entrada, quando houver, será válida.
 
-Examples:
+Exemplos:
 
 $> ./fprime 225225 | cat -e
 3*3*5*5*7*11*13$

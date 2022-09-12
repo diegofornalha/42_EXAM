@@ -21,7 +21,7 @@ then
         echo "----------------8<-------------[ START TEST " >> traceback
         printf "        💻 TEST\n./a.out $PORT\n" >> traceback
         printf " Then there is 3 connexion to the server\n" >> traceback
-        printf "        🔎 YOUR OUTPUT:\n" >> traceback
+        printf "        🔎 SUA SAÍDA:\n" >> traceback
         cat bim >> traceback
         printf "        🗝 EXPECTED OUTPUT:\n" >> traceback
         cat normal.output >> traceback

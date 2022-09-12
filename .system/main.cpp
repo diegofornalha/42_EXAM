@@ -1,21 +1,21 @@
 #include "exam.hpp"
 
-// ==> Help section
+// ==> seção de ajuda
 void exam::exam_help()
 {
-    std::cout << "Commands:" << std::endl;
-    std::cout << LIME << "    help:" << RESET << " display this help" << std::endl;
-    std::cout << LIME << "    status:" << RESET << " display information about the exam" << std::endl;
-    std::cout << LIME << "    finish:" << RESET << " exit the exam" << std::endl;
-    std::cout << LIME << "    grademe:" << RESET << " grade your exercice" << std::endl;
-    std::cout << LIME << "    repo_git:" << RESET << " visit github repo" << std::endl;
-    std::cout << "See github repo to find some more 'cheat' command" << std::endl;
+    std::cout << "Comandos:" << std::endl;
+    std::cout << LIME << "    help:" << RESET << " exibir esta ajuda" << std::endl;
+    std::cout << LIME << "    status:" << RESET << " exibir informações sobre o exame" << std::endl;
+    std::cout << LIME << "    finish:" << RESET << " sair do exame" << std::endl;
+    std::cout << LIME << "    grademe:" << RESET << " classifique seu exercício" << std::endl;
+    std::cout << LIME << "    repo_git:" << RESET << " visite o repositório do github" << std::endl;
+    std::cout << "Veja o repositório do github para encontrar mais comandos 'cheat'" << std::endl;
     if (vip)
     {
-        std::cout << BOLD << LIME << "VIP MENU:" << RESET << std::endl;
-        std::cout << LIME << "    force_success:" << RESET << " force a ex to success" << std::endl;
-        std::cout << LIME << "    remove_grade_time:" << RESET << " remove grade time limit between two grademe" << std::endl;
-        std::cout << LIME << "    gradenow:" << RESET << " instant grade exercice" << std::endl;
+        std::cout << BOLD << LIME << "MENU VIP:" << RESET << std::endl;
+        std::cout << LIME << "    force_success:" << RESET << " forçar um ex ao sucesso" << std::endl;
+        std::cout << LIME << "    remove_grade_time:" << RESET << " remover o limite de tempo da nota entre duas notas" << std::endl;
+        std::cout << LIME << "    gradenow:" << RESET << " exercício de grau instantâneo" << std::endl;
     }
 }
 
@@ -80,7 +80,7 @@ void exam::exam_prompt(void)
         add_history(line);
         std::string tmp = "bash .system/data_sender.sh \"cheatcode:repo_git\"";
         system(tmp.c_str());
-        std::cout << "Opening git repo..." << std::endl;
+        std::cout << "Abrindo repositório git..." << std::endl;
         if (is_linux)
             std::system("xdg-open http://git.grademe.fr");
         else
@@ -107,31 +107,31 @@ void exam::exam_prompt(void)
     }
 }
 
-// ==> Set good folder and copy subjects, etc...
+// ==> Definir uma boa pasta e copiar assuntos, etc...
 bool exam::prepare_current_ex(void)
 {
     if (level == level_max)
     {
-        std::cout << "You have reached the maximum level of this exam." << std::endl;
+        std::cout << "Você atingiu o nível máximo deste exame." << std::endl;
         return (false);
     }
     if (!file_exists(get_path()))
     {
-        std::cout << "Error: Cannot load exercice, unable to find valid path" << std::endl;
+        std::cout << "Erro: Não é possível carregar o exercício, não é possível encontrar um caminho válido" << std::endl;
         return (false);
     }
 
-    // clean all old files
+// limpa todos os arquivos antigos
     clean_all();
 
-    // create directory for the current exercice
+// cria diretório para o exercício atual
     system("mkdir rendu && mkdir subjects && mkdir .system/grading");
 
-    // copy all the files in the current get_path() + attachement/* to the subjects directory
+// copia todos os arquivos no atual get_path() + attachement/* para o diretório de assuntos
     std::string cmd_system_call = "cp -r " + get_path() + "/attachement/*" + " subjects/";
     system(cmd_system_call.c_str());
 
-    // copy all the files in the current get_path() without the attachement folder to the .system/grading/ directory
+// copia todos os arquivos no get_path() atual sem a pasta de anexos para o diretório .system/grading/
     cmd_system_call = "cp " + get_path() + "* .system/grading/ >/dev/null 2>&1";
     system(cmd_system_call.c_str());
 
@@ -155,11 +155,11 @@ bool exam::start_new_exam(void)
     }
     if(connexion_need)
     {
-        std::cout << "You're connected " << LIME << username << RESET << "!" << std::endl;
-        std::cout << "You can log out at any time. If this program tells you you earned points,\nthen they will be counted whatever happens.\n"
+        std::cout << "Você está conectado " << LIME << username << RESET << "!" << std::endl;
+        std::cout << "Você pode sair a qualquer momento. Se este programa disser que você ganhou pontos,\nentão eles serão contados aconteça o que acontecer.\n"
                   << std::endl;
-        std::cout << BOLD << WHITE << "You are about to start the project " << LIME << BOLD << "ExamRank0" << exam_number << BOLD << WHITE << ", in " << MAGENTA << "REAL" << BOLD << WHITE << " mode, at level " << YELLOW << level << BOLD << WHITE << "." << RESET << std::endl;
-        std::cout << WHITE << BOLD << "You would have " << LIME << BOLD << (time_max / 60) << "hrs " << BOLD << WHITE << "to complete this project." << RESET << std::endl << "Press a key to start exam 🏁" << std::endl;
+        std::cout << BOLD << WHITE << "Você está prestes a iniciar o projeto" << LIME << BOLD << "ExamRank0" << exam_number << BOLD << WHITE << ", in " << MAGENTA << "REAL" << BOLD << WHITE << " modo, no nível " << YELLOW << level << BOLD << WHITE << "." << RESET << std::endl;
+        std::cout << WHITE << BOLD << "Você teria " << LIME << BOLD << (time_max / 60) << "hrs " << BOLD << WHITE << "para concluir este projeto." << RESET << std::endl << "Pressione uma tecla para iniciar o exame 🏁" << std::endl;
         if (!std::getline(std::cin, enter))
             sigd();
         connexion_need = false;

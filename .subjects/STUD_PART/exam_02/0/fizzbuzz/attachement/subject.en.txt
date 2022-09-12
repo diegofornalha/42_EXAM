@@ -3,16 +3,16 @@ Expected files   : fizzbuzz.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 
-Write a program that prints the numbers from 1 to 100, each separated by a
-newline.
+Escreva um programa que imprima os números de 1 a 100, cada um separado por um
+nova linha.
 
-If the number is a multiple of 3, it prints 'fizz' instead.
+Se o número for um múltiplo de 3, ele imprimirá 'fizz' em vez disso.
 
-If the number is a multiple of 5, it prints 'buzz' instead.
+Se o número for um múltiplo de 5, ele imprimirá 'buzz' em vez disso.
 
-If the number is both a multiple of 3 and a multiple of 5, it prints 'fizzbuzz' instead.
+Se o número for múltiplo de 3 e múltiplo de 5, ele imprimirá 'fizzbuzz'.
 
-Example:
+Exemplo:
 
 $>./fizzbuzz
 1

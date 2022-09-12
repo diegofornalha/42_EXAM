@@ -18,7 +18,7 @@ void exam::success_ex()
     std::string tmp = "bash .system/data_sender.sh \"success_ex: " + current_ex->get_name() + " level:" + std::to_string(level) + " assignement:" + std::to_string(current_ex->get_assignement()) + "\"";
     system(tmp.c_str());
     up_lvl();
-    std::cout << "(Press enter to continue...)" << std::endl;
+    std::cout << "(Pressione enter para continuar...)" << std::endl;
     std::string input;
     if(!std::getline(std::cin, input))
         sigd();
@@ -71,12 +71,12 @@ void exam::grademe(void)
 {
     // std::cout << "time before grading: " << current_ex->time_bef_grade << " seconds" << std::endl;
     std::cout << std::endl
-              << "Before continuing, please make " << RED << "ABSOLUTELY SURE" << RESET << " that you are in the right directory," << std::endl;
-    std::cout << "that you didn't forget anything, etc..." << std::endl;
-    std::cout << "If your assignement is wrong, you will have the same assignment" << std::endl;
+              << "Antes de continuar, faça " << RED << "CERTEZA ABSOLUTA" << RESET << " que você está no diretório certo," << std::endl;
+    std::cout << "que você não esqueceu nada, etc..." << std::endl;
+    std::cout << "Se sua atribuição estiver errada, você terá a mesma atribuição" << std::endl;
     std::cout << std::endl
-              << " but with less potentiel points to earn !" << std::endl;
-    std::cout << RED << "Are you sure?" << RESET << " [y/N] ";
+              << " mas com menos pontos de potencial para ganhar !" << std::endl;
+    std::cout << RED << "Tem certeza?" << RESET << " [y/N] ";
     std::string input;
     if (!std::getline(std::cin, input))
         sigd();
@@ -84,12 +84,12 @@ void exam::grademe(void)
     {
         if (current_ex->time_bef_grade > time(NULL) && waiting_time)
         {
-            std::cout << RED << "ERROR: " << RESET << "You must wait at least " << YELLOW << BOLD;
+            std::cout << RED << "ERRO: " << RESET << "Você deve esperar pelo menos " << YELLOW << BOLD;
             if ((((current_ex->time_bef_grade - time(NULL))) / 60) >= 1)
-                std::cout << (current_ex->time_bef_grade - time(NULL)) / 60 << " minutes" << RESET << " and " << YELLOW << BOLD << (current_ex->time_bef_grade - time(NULL)) % 60 << " seconds" << RESET;
+                std::cout << (current_ex->time_bef_grade - time(NULL)) / 60 << " munutos" << RESET << " e " << YELLOW << BOLD << (current_ex->time_bef_grade - time(NULL)) % 60 << " seconds" << RESET;
             else
-                std::cout << (current_ex->time_bef_grade - time(NULL)) << " seconds" << RESET;
-            std::cout << " until next grading request, so take your time to make more tests and be sure you will succeed next try!" << std::endl;
+                std::cout << (current_ex->time_bef_grade - time(NULL)) << " segundos" << RESET;
+            std::cout << " até a próxima solicitação de avaliação, então reserve um tempo para fazer mais testes e tenha certeza de que terá sucesso na próxima tentativa" << std::endl;
             return;
         }
         std::cout << "Ok, making grading request to server now." << std::endl;
@@ -106,8 +106,8 @@ void exam::grade_request(bool i)
 {
     if(!i)
     {
-    std::cout << std::endl << "We will now wait for the job to complete." << std::endl << "Please be " << LIME << "patient" << RESET << ", this " << LIME << "CAN" << RESET " take several minutes..." << std::endl;
-    std::cout << "(10 seconds is fast, 30 seconds is expected, 3 minutes is a maximum)" << std::endl;
+    std::cout << std::endl << "Agora vamos aguardar a conclusão do trabalho." << std::endl << "Por Favor seja " << LIME << "paciente" << RESET << ", isto " << LIME << "CAN" << RESET " levar vários minutos..." << std::endl;
+    std::cout << "(10 segundos é rápido, 30 segundos são esperados, 3 minutos é o máximo)" << std::endl;
     srand(time(NULL));
     int waiting_seconds = rand() % 5 + 1;
     for (int i = 0; i < waiting_seconds; i++)
@@ -121,7 +121,7 @@ void exam::grade_request(bool i)
 
     if (!file_exists(".system/grading/tester.sh"))
     {
-        std::cout << "Error: Unable to find grading script for this exercice, it's comming soon. You can use \"force_success\" to pass this ex." << std::endl;
+        std::cout << "Erro: Não foi possível encontrar o script de avaliação para este exercício, ele será lançado em breve. Você pode usar \"force_success\" para passar este ex." << std::endl;
         return;
     }
 
@@ -133,11 +133,11 @@ void exam::grade_request(bool i)
     }
     else
     {
-        std::cout << RED <<  ">>>>>>>>>> FAILURE <<<<<<<<<<" << RESET << std::endl; 
+        std::cout << RED <<  ">>>>>>>>>> FALHOU <<<<<<<<<<" << RESET << std::endl; 
         sleep(1);
-        std::cout << "You have failed the assignement." << std::endl;
+        std::cout << "Você falhou na atribuição." << std::endl;
 
-        // if there is a traceback file, create a folder traces and copy the file to it with the good name
+        // se houver um arquivo traceback, crie uma pasta traces e copie o arquivo para ela com o bom nome
         if (file_exists("traceback"))
         {
             system("mkdir -p traces");
@@ -151,7 +151,7 @@ void exam::grade_request(bool i)
             std::cout << "No traceback found." << std::endl << std::endl;
         }
         fail_ex();
-        std::cout << "(Press enter to continue...)" << std::endl;
+        std::cout << "(Pressione enter para continuar...)" << std::endl;
         std::string input;
         if(!std::getline(std::cin, input))
             sigd();

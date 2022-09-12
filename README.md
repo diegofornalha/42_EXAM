@@ -1,70 +1,67 @@
 # 42_EXAM v2 🎓
- ## All 42 exams auto-correct, to practice.
- ## ExamRank02, 03, 04, 05, 06 & PiscineExam
-  ##   👉  42_EXAM is now part of **[GRADEME.FR](https://grademe.fr)** 😎
- #### Disclaimer: This project is not made by 42, it is not identical to the proposed exams and does not reflect your exams at 42
- ### NEW ExamRank02 available 🥳
+## Todos os 42 exames se auto-correm, para praticar.
+## ExamRank02, 03, 04, 05, 06 & PiscineExam
+##   👉  42_EXAM v1  👈
+#### Aviso Legal: Este projeto não é feito por 42, não é idêntico aos exames propostos e não reflete seus exames em 42
+### NOVO ExamRank02 disponível   
  
 
 <img width="711" alt="Screenshot 2022-09-06 at 17 00 20" src="https://user-images.githubusercontent.com/55356071/188669215-6681228d-e6b5-4229-b177-45d2699e29ae.png">
 
 -----
 
-### ⚠️ This project is available on MAC and LINUX (the real exam will be on Linux)
-###     ➡ On Linux, 42_EXAM is still on beta, please report any bugs
+### ⚠️ Este projeto está disponível no MAC e LINUX (o exame real será no Linux)
+### ➡ No Linux, 42_EXAM ainda está na versão beta, por favor reporte quaisquer bugs
 
 -----
 
- ## Practice for the 42 exam 🏊‍♂️
+## Pratique para o exame 42 🏊‍♂️
+### 42_EXAM é um projeto que permite que você pratique para o exame 42, sem ter que esperar por um exame real.
 
- 
-  - [x] New Subjects ExamRank02 APRIL 2022 ✔️
-  - [ ] Setup correction level 4 ExamRank02 
-  - [x] Subject drawn at random ✔️
-  - [x] Exponential waiting for a correction ✔️
-  - [x] X Hours maximum ✔️
-  - [x] Automatic correction (without internet) ✔️
-  - [x] Traceback available ✔️
+  - [x] Novas Matérias ExamRank02 ABRIL 2022 ✔️
+  - [ ] Nível de correção de configuração 4 ExamRank02
+  - [x] Assunto sorteado aleatoriamente ✔️
+  - [x] Exponencial aguardando correção ✔️
+  - [x] X Horas no máximo ✔️
+  - [x] Correção automática (sem internet) ✔️
+  - [x] Traceback disponível ✔️
 
 <img width="711" alt="Screenshot 2022-09-06 at 17 00 47" src="https://user-images.githubusercontent.com/55356071/188669367-504411a5-5c62-4848-932e-405c9ee05a45.png">
 
 <img width="711" alt="Screenshot 2022-09-06 at 17 01 15" src="https://user-images.githubusercontent.com/55356071/188669418-04f8bb1b-9cc2-4c07-9d07-5e9c570283b4.png">
 
-
-
-
- # CHEAT code :
- (sorry don't work in exam at 42)
+# Código de trapaça :
+ (desculpe não funcionar no exame em 42)
    
-   **remove_grade_time** : remove grade time between two push
+**remove_grade_time** : remove o tempo de avaliação entre dois push
    
-      > The maximum time to complete the exam is only information. Here, the exercise can always be corrected even after the time limit.
+      > O tempo máximo para concluir o exame é apenas informativo. Aqui, o exercício sempre pode ser corrigido mesmo após o limite de tempo.
       
-   **force_success** : force an exercice to success
+**force_success** : força um exercício ao sucesso
 
- # Launch in ONE COMMAND : 
+# Lançamento em UM COMANDO:
 
  ```bash -c "$(curl https://grademe.fr)"```    --> Visit [Grademe.fr](https://grademe.fr)
  
-# RGPD Information :
- Some data may be collected for the sole purpose of improving the service, for example to check if an error is coming from the student and not from the program. 
-The data that can be collected are : 
-- the host name of your machine.
-- the exam number you choose.
-- name of exercice, fail or success, current assignement and level.
+# Informações do RGPD:
+ Alguns dados podem ser coletados com o único propósito de melhorar o serviço, por exemplo, para verificar se um erro está vindo do aluno e não do programa.
+Os dados que podem ser coletados são:
+- o nome do host da sua máquina.
+- o número do exame que você escolher.
+- nome do exercício, reprovação ou sucesso, atribuição atual e nível.
 
-# Disclaimer for 42 staff :
+# Isenção de responsabilidade para 42 funcionários:
 
-This project is not identical to the proposed exams and does not reflect 42 official exam. 
-It is only meant to help 42 students to train on some exercises found on Github. 
-It works simply by doing a DIFF on both versions. 
-All the subjects have been found on Github. During my schooling at 42, this project helped me to understand a lot of notions like to host a website, to do javascript, php and others.
-This project has been created with the sole purpose of helping students to understand their mistakes and improve themselves. 
-If it’s not the case, I am ready to make changes and corrections on it, 42_EXAM/GradeMe has only a non-lucrative and educational purpose. It is completely free and open-source. 
+Este projeto não é idêntico aos exames propostos e não reflete 42 exame oficial.
+Destina-se apenas a ajudar 42 alunos a treinar em alguns exercícios encontrados no Github.
+Funciona simplesmente fazendo um DIFF em ambas as versões.
+Todos os assuntos foram encontrados no Github. Durante meus estudos aos 42 anos, este projeto me ajudou a entender muitas noções como hospedar um site, fazer javascript, php e outros.
+Este projeto foi criado com o único propósito de ajudar os alunos a entender seus erros e melhorar a si mesmos.
+Se não for o caso, estou pronto para fazer alterações e correções nele, 42_EXAM/GradeMe tem apenas um propósito não lucrativo e educacional. É totalmente gratuito e de código aberto.
 
 
-# Your help is welcome
+# Sua ajuda é bem vinda
 
-👋 If you have any problem with the test, it would be nice to create an "Issue", it will take 3 minutes of your time and it will help me to make the test accessible to more people.
+👋 Se você tiver algum problema com o teste, seria bom criar um "Problema", levará 3 minutos do seu tempo e me ajudará a tornar o teste acessível a mais pessoas.
 
-📌 Remember that if you encounter an error, you are probably not the only one and your "Issue" will surely help other people.
+📌 Lembre-se que se você encontrar um erro, provavelmente você não é o único e seu "Problema" certamente ajudará outras pessoas.

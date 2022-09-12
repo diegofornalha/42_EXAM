@@ -1,10 +1,10 @@
-Assignment name  : ft_strlen
-Expected files   : ft_strlen.c
-Allowed functions:
+Nome da atribuição  : ft_strlen
+Arquivos esperados  : ft_strlen.c
+Funções permitidas  :
 --------------------------------------------------------------------------------
 
-Write a function that returns the length of a string.
+Escreva uma função que retorne o comprimento de uma string.
 
-Your function must be declared as follows:
+Sua função deve ser declarada da seguinte forma:
 
 int	ft_strlen(char *str);

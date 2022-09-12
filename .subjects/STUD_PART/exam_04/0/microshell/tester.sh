@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    tester.sh                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+         #
+#    By: dida-sil <dida-sil@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/20 02:26:11 by jcluzet           #+#    #+#              #
-#    Updated: 2022/09/03 22:53:09 by jcluzet          ###   ########.fr        #
+#    Updated: 2022/09/08 23:18:40 by dida-sil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,12 +53,12 @@ then
 		if [ -e a.out ]
 		then
         printf "        💻 ALL TESTS: \n\n$(cat ../.system/grading/test.sh)\n" >> traceback
-        printf "\n\n        🔎 YOUR OUTPUT:\n" >> traceback
+        printf "\n\n        🔎 SUA SAÍDA:\n" >> traceback
         cat finalexam >> traceback
         printf "\n\n        🗝 EXPECTED OUTPUT:\n" >> traceback
 		cat sourcexam >> traceback
 		else
-		printf "        🔎 YOUR OUTPUT:\n" >> traceback
+		printf "        🔎 SUA SAÍDA:\n" >> traceback
         # cat finalexam >> traceback
         printf "\n";
         echo "$(cat .dev)" >> traceback
